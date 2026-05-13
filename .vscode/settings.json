@@ -1,0 +1,7 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureArgs": ["-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"],
+    "cmake.configureOnOpen": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build/Debug",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/Debug/compile_commands.json"
+}

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('contributes',{}\\).get\\('debuggers',[{}]\\)[0] if d.get\\('contributes',{}\\).get\\('debuggers'\\) else d.get\\('contributes',{}\\), indent=2\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('contributes',{}\\), indent=2\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/STMicroelectronics//**)",
+      "Bash(winget search *)",
+      "Bash(winget install *)",
+      "Bash(code --install-extension marus25.cortex-debug)",
+      "Read(//c/Users/Tal/AppData/Local/Microsoft/WinGet//**)",
+      "Read(//c/Users/Tal/AppData//**)",
+      "Bash(Remove-Item -Recurse -Force \"C:\\\\DroneProject\\\\Nucleo_First_Blink\\\\build\")"
+    ]
+  }
+}
