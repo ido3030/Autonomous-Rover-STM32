@@ -15,6 +15,20 @@
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": ["$gcc"],
             "dependsOn": ["CMake Configure"]
+        },
+        {
+            "label": "OpenOCD Flash",
+            "type": "shell",
+            "command": "openocd -f interface/stlink.cfg -f target/stm32f7x.cfg -c \"program build/Debug/Nucleo_First_Blink.elf verify reset exit\"",
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": { "reveal": "always" },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build & Flash",
+            "dependsOn": ["CMake Build", "OpenOCD Flash"],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
         }
     ]
 }
