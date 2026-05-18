@@ -30,6 +30,7 @@ Future: Raspberry Pi companion computer + camera for object detection.
 - Meeting 4: PWM fade working on PB7/TIM4_CH2 (blue LED)
   - Flash workflow: Ctrl+Shift+B then openocd command in terminal
   - F5 builds but does not flash - use OpenOCD directly
+- Meeting 4 DSLogic validation: PWM 1kHz confirmed, duty cycle verified with logic analyzer
 
 ## Next task — Meeting 5: DC Motor Control via L298N
 - Hardware arriving soon (L298N, 4WD chassis, HC-SR04, SG90)
