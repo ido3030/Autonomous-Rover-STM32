@@ -25,19 +25,16 @@ Future: Raspberry Pi companion computer + camera for object detection.
 - Servo powered from buck converter, NOT from Nucleo pins
 
 ## Completed so far
-- Meeting 1-2: LED blink, button input, OpenOCD debug setup
-- Meeting 3: Bidirectional UART (W/A/S/D commands + telemetry)
-- Meeting 4: PWM fade working on PB7/TIM4_CH2 (blue LED)
-  - Flash workflow: Ctrl+Shift+B then openocd command in terminal
-  - F5 builds but does not flash - use OpenOCD directly
-- Meeting 4 DSLogic validation: PWM 1kHz confirmed, duty cycle verified with logic analyzer
+- Meeting 1-2: LED blink, button, OpenOCD debug
+- Meeting 3: Bidirectional UART telemetry
+- Meeting 4: PWM on PB7/TIM4_CH2, DSLogic validated 1kHz
+- Meeting 5: W/A/S/D UART control + MotorDriver.h/.cpp created
 
-## Next task — Meeting 5: DC Motor Control via L298N
-- Hardware arriving soon (L298N, 4WD chassis, HC-SR04, SG90)
-- Configure 2 more PWM channels for left/right motor speed
-- Add GPIO pins for L298N direction control (IN1/IN2/IN3/IN4)
-- Write motor driver: forward, backward, left, right, stop
-- Test with DSLogic before connecting real motors
+## Next task — Meeting 6: Connect L298N hardware
+- Hardware arriving soon
+- Wire L298N using MotorDriver pin map
+- Test motors with DSLogic on ENA/ENB pins first
+- Flash MotorDriver into main.c and drive motors
 
 ## Flash command
 openocd -f interface/stlink.cfg -f target/stm32f7x.cfg -c "program build/Debug/Nucleo_First_Blink.elf verify reset exit"
